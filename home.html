@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Yield Estimator</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+<h1><div class="header">Regression Based Crop Yield Estimation Model (Rice)</div></h1>
+<div class="container">
+	
+	<form id="contact" method="POST" action="/predict">
+		<fieldset>
+		<input type="text" name="District" placeholder="District" tabindex="1" required autofocus>
+		<small id="MYhelp" class="form-text text-muted">Enter the District</small><br>
+		</fieldset>
+		<fieldset>
+		<input type="number" name="Year" placeholder="Year" tabindex="2" min="1996" max="2016">
+		<small id="MYhelp" class="form-text text-muted">Enter the value for Year</small><br>
+		</fieldset>
+		<fieldset>
+		<input type="number" name="Area" placeholder="Area" tabindex="2" min="10" required >
+		<small id="MYhelp" class="form-text text-muted">Enter the value for Area</small><br>
+		</fieldset>
+		<fieldset>
+		<input type="number" name="Production" placeholder="Production" tabindex="2" required >
+		<small id="MYhelp" class="form-text text-muted">Enter the value for Production</small><br>
+		</fieldset>
+		<fieldset>
+		<input type="number" name="Annual_rainfall" placeholder="Annual_rainfall" tabindex="2" step="0.01" min="1200" max="2900" required >
+		<small id="MYhelp" class="form-text text-muted">Enter the value for Annual_rainfall</small><br>
+		</fieldset>
+		<fieldset>
+		<input type="number" name="Temperature" placeholder="Temperature" tabindex="2" step="0.1" min="21.0" max="40.0" required >
+		<small id="MYhelp" class="form-text text-muted">Enter the value for Temperature</small><br>
+		</fieldset>
+		<fieldset>
+		<button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+		</fieldset>
+		
+</form>
+</div>	
+</div>
+<div class="crop-info">
+<img src="/static/images/rice.jpg"">
+<section>
+	<b style="color:white; font-size: 30px;"><u>Sowing, Harvesting and Yield</u></b><br><br>
+Paddy rice crops are grown when the subsequent activities are carried out:
+The size of nursery is generally 4 - 9% of the complete area that needs to be cultivated; Eg: Considering the field size to be 1200 metre square, hence, nursery comes out to be approx 0.05x1200=60 metre square and 0.10x1200=120 metre square.
+
+Groundwork starts about 1-2 months prior the rice crop is sown. The first step in growing rice is to completely flood the field. After flooding, plouging is done. Ploughing includes the primary breaking and rotation of soil. Flooded field is easier to plough. Ploughing can be done by various methods, including by animal toehold (with buffaloes or oxen), hands (by means of a hoe) or by the use of machinery.
+
+Ploughing can also be done on dry soil; which is, on the other hand, quite bulkier and can only be done with the availability of tractors.  Besides ploughing, the puddling of soil is vital. This includes breaking down of giant soil clods. Puddling minimises the penetrating characteristic of soil and helps percolation losses. Hence puddling, comes the time for soil to be leveled. During this process, the soil's flattened. To smooth the progress of the leveling, the field's submerged in a hollow layer of water. This makes it possible to notice the higher spots. Leveling is done using a rake, a shovel, or a leveling board.
+
+One month approx after the sowing of nursery, the seedlings are cultivated. 4-5 leaves grow thwn to the seedlings. Robust seedlings are chosen for cultivation. Rice field is drenched wih water before transplanting the seedlings. Straight row pattern with appropriate space between seedlings endures high yield.
+</section>
+</div>
+
+<div class="crop-info-left">
+<section>
+	<b style="color:white; font-size: 30px;"><u>Climate Requirement</u></b><br><br>
+In India, rice crop is cultivated under varying altitudes and climates. Rice crop growth in India ranges from 9 to 36ºN latitude and from 4000 meters to sea level. Rice crop facilitates in hot & humid climatic conditions. It is recomended for regions with great humidity, perpetual sunshine and an assertive water supply.  21 to 37º C is the accurate temperature needed from begining to end of rice crop. Maximum temp which the crop can tolerate 40°C to 42°C.
+<br><br>
+<b style="color:white; font-size: 30px;"><u>Major Rice Producing States in India</u></b><br>
+West Bengal, Uttar Pradesh, Punjab, Tamil Nadu, Assam, Andhra Pradesh, Bihar, Orissa
+</section>
+</div>	
+</body>
+</html>
