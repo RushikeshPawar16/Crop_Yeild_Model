@@ -1,0 +1,80 @@
+
+.ulist{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #ccc;
+    margin: 0;
+    padding: 0;
+}
+.ulist .list{
+    list-style: none;
+    position: relative;
+    width: 20%;
+    height: 100%;
+    border-right: 1px solid #000;
+    float:left;
+    box-sizing: border-box;
+    transition: 0.3s;
+    text-align: center;
+    overflow: hidden;
+
+}
+
+.ulist .list:nth-child(1)
+{
+    background: url("f6.jpg");
+    background-size: cover;
+    background-position: left;
+}
+.ulist .list:nth-child(2)
+{
+    background: url("f9.jpg");
+    background-size: cover;
+    background-position: left;
+}
+.ulist .list:nth-child(3)
+{
+    background: url("f3.jpg");
+    background-size: cover;
+    background-position: left;
+}
+.ulist .list:nth-child(4)
+{
+    background: url("f4.jpg");
+    background-size: cover;
+    background-position: left;
+}
+.ulist .list:nth-child(5)
+{
+    background: url("f5.jpg");
+    background-size: cover;
+    background-position: left;
+}
+
+.ulist:hover li{
+    width:10%;
+}
+
+.ulist .list:hover{
+    width: 60%;
+
+}
+
+.ulist .list .content{
+    position: absolute;
+    bottom: -1000%;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,.8);
+    box-sizing: border-box;
+    color: #fff;
+}
+.ulist .list:hover .content{
+    bottom:0;
+    transition: 0.3s;
+    transition-delay: 0.5s;
+    opacity: 1;
+}

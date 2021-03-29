@@ -1,0 +1,66 @@
+body {
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  font-size: 20px;
+  line-height: 30px;
+  color: #777;
+  background: #669977;
+}
+.header1{
+	text-align:center;
+	color:white;
+	height:60px;
+	background: gray;
+	width: 100%;
+	padding-top: 10px;
+	position:center;
+  font-size: 35px;
+	
+}
+
+.map1 {
+float: left;
+padding-right: 15px;
+margin-top: 10px;
+padding-top: 10px;
+}
+
+.stats-left
+{
+float: left;
+color: white;	
+}
+
+.stats-right{
+	float: right;
+	padding-right: 25px; 
+	color: white;
+}
+
+.stats-right img
+{
+float: right;
+width:600px;
+height: 600px;
+
+}
+.stats-right table {
+  border-collapse: collapse;
+  width: 100%;
+  padding-right: 20px;
+  margin-right: 25px;
+}
+
+.stats-right th, td {
+  text-align: justify;
+  padding: 8px;
+  color:black;
+  width: 280px;
+}
+
+.stats-right tr:nth-child(even){background-color: linen}
+
+.stats-right th {
+  background-color: #4CAF50;
+  color: black;
+}

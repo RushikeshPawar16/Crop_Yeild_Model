@@ -1,0 +1,421 @@
+
+body {margin:0;
+      font-family: "Helvetica Neue",sans-serif;
+      font-weight: lighter;
+}
+
+.wrapper{
+      z-index: 1;
+}
+header {
+      width: 100%;
+     z-index: 1;
+}
+.main {
+  position: relative;
+  
+}
+.content {
+      width: 94%;
+      margin: 4em auto;
+      font-size: 20px;
+      line-height: 30px;
+      text-align: justify;
+}
+
+.logo {
+      line-height: 60px;
+      position: fixed;
+      float: left;
+      margin: 16px 46px;
+      color: yellow;
+      font-weight: bold;
+      font-size: 20px;
+      letter-spacing: 2px;
+      z-index: 1;
+}
+
+nav {
+      position: fixed;
+      width: 100%;
+      line-height: 60px;
+      z-index: 1;
+}
+
+nav ul {
+      line-height: 60px;
+      list-style: none;
+      background: rgba(0, 0, 0, 0);
+      overflow: hidden;
+      color: #fff;
+      padding: 0;
+      text-align: right;
+      margin: 0;
+      padding-right: 40px;
+      transition: 1s;
+      font-weight: bold;
+}
+
+nav.black ul {
+      background: #669977;
+}
+
+nav ul li {
+      display: inline-block;
+      padding: 16px 40px;;
+}
+
+nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 16px;
+}
+
+.menu-icon {
+      line-height: 60px;
+      width: 100%;
+      background: #000;
+      text-align: right;
+      box-sizing: border-box;
+      padding: 15px 24px;
+      cursor: pointer;
+      color: #fff;
+      display: none;
+}
+
+
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  margin: auto;
+  position: relative;
+}
+#container
+{
+position: relative;
+max-height: 100%;
+
+}
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: yellow;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 8px 12px;
+  
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  background-color: #669977;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+.b1{
+  color: #669977;
+   border-left: 6px solid black;
+   float: left;
+   border-width: 10px;
+  height: 185px;
+  width: 45%;
+   font: 400 100px/1.2 'Merienda One', Helvetica, sans-serif;
+  text-shadow: 3px 3px 3px #fff;
+  font-size: 45px;
+  font-weight: bold;
+
+  margin-left: 15px;
+  padding: 10px 10px;
+  }
+
+.b11{
+    height: 185px;
+    float: right;
+    width:50%;
+  }
+  .b11 img{
+
+ height: 350px;
+ width: 800px;
+}
+
+  .b2{
+    color: black;
+    padding: 10px 10px;
+    font-size: 20px;
+    text-align: justify;
+    width: 45%;
+    font-weight: bold;
+  }
+  .b12{
+    height: 600px;
+    float: left;
+    width:45%;
+    padding-left: 15px;
+    padding-top: 15px;
+  }
+  .b12 img{
+
+ height: 1050px;
+ width: 790px;
+}
+.b21{
+  color: #669977;
+   border-left: 6px solid black;
+   float: right;
+   border-width: 10px;
+  height: 200px;
+  width: 50%;
+   font: 400 100px/1.2 'Merienda One', Helvetica, sans-serif;
+  text-shadow: 3px 3px 3px #fff;
+  font-size: 45px;
+  font-weight: bold;
+
+  margin-left: 15px;
+  padding: 10px 10px;
+  }
+
+  .b12list{
+    color: black;
+    float:right;
+    padding-top: 10px;
+    padding-right: 10px;
+    font-size: 20px;
+    text-align: justify;
+    width: 51%;
+    font-weight: bold;
+     line-height: 200%;
+  }
+
+#map {
+        width: 380px;
+        height: 150px;
+        background-color: grey;
+}
+
+
+.footer-distributed{
+  background-color: #292c2f;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  height: 350px;
+  text-align: left;
+  font: bold 16px sans-serif;
+  padding: 55px 50px;
+  position: absolute;
+  bottom: -1890px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+  width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+  color:  #ffffff;
+  font: normal 36px 'Cookie', cursive;
+  margin: 0;
+}
+
+.footer-distributed h3 span{
+  color:  #5383d3;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+  color:  #ffffff;
+  margin: 20px 0 12px;
+  padding: 0;
+}
+
+.footer-distributed .footer-links a{
+  display:inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+  color:  #8f9296;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+  width: 35%;
+}
+
+.footer-distributed .footer-center i{
+  background-color:  #33383b;
+  color: #ffffff;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+  font-size: 17px;
+  line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+  display: inline-block;
+  color: #ffffff;
+  vertical-align: middle;
+  margin:0;
+}
+
+.footer-distributed .footer-center p span{
+  display:block;
+  font-weight: normal;
+  font-size:14px;
+  line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+  color:  #5383d3;
+  text-decoration: none;;
+}
+
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+  width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+  line-height: 20px;
+  color:  #92999f;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+  display: block;
+  color:  #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+  margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background-color:  #33383b;
+  border-radius: 2px;
+
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
