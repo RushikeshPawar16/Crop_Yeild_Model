@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Yield Estimator</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body><div class="header">
+                <div class="home">
+                    <button class="btn-2"><a href="{{url_for('h1')}}">HOME</a></button>
+                </div>
+                <div class="contact_us">
+                    <button class="btn-2" ><a href="{{url_for('district')}}">DISTRICTS Information</a></button>
+                </div>
+            </div>
+<h1><div class="header1">Regression Based Crop Yield Estimation Model (Groundnut)</div></h1>
+<div class="container">
+	
+	<form id="contact" method="POST" action="/predictgroundnut">
+		<fieldset>
+		<select name="District" style="width:100%;height:50px;">
+            <option disabled selected value>-- select a district --</option>
+            <option  value="Nashik">Nashik</option>
+            <option  value="kolhapur">kolhapur</option>
+            <option  value="Sangli">Sangli</option>
+            <option  value="Satara">Satara</option>
+            <option  value="Solapur">Solapur</option>
+			</select><br>
+        <small id="MYhelp" class="form-text text-muted">Select district</small><br>
+		</fieldset>
+		<fieldset>
+		<input type="number" name="Year" placeholder="Year" tabindex="2" min="1996" max="2016">
+		<small id="MYhelp" class="form-text text-muted">Enter the value for Year</small><br>
+		</fieldset>
+		<fieldset>
+		<input type="number" name="Area" placeholder="Area" tabindex="2" min="10" required >
+		<small id="MYhelp" class="form-text text-muted">Enter the value for Area</small><br>
+		</fieldset>
+		<fieldset>
+		<input type="number" name="Production" placeholder="Production" tabindex="2" required >
+		<small id="MYhelp" class="form-text text-muted">Enter the value for Production</small><br>
+		</fieldset>
+		<fieldset>
+		<input type="number" name="Annual_rainfall" placeholder="Annual_rainfall" tabindex="2" step="0.01" min="500" max="2900" required >
+		<small id="MYhelp" class="form-text text-muted">Enter the value for Annual_rainfall</small><br>
+		</fieldset>
+		<fieldset>
+		<input type="number" name="Temperature" placeholder="Temperature" tabindex="2" step="0.1" min="18.0" max="45.0" required >
+		<small id="MYhelp" class="form-text text-muted">Enter the value for Temperature</small><br>
+		</fieldset>
+		<fieldset>
+		<button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+		</fieldset>
+		
+</form>
+</div>	
+</div>
+<div class="crop-info">
+<img src="/static/images/groundnut.jpg">
+<section>
+	<b style="color:white; font-size: 30px;"><u>Sowing, Harvesting and Yield</u></b><br><br>
+In bundle sorts, the line to line separation is kept 30-40 cm and in spreading sorts 45-60 cm. For this, 80-100 kg of seeds for every hectare would be sufficient for group sorts and 60-80 kg for spreading sorts. Plant to plant separation would be 15 and 20 cm for bundle and spreading sort's separately. Sowing ought to be done around 5 cm profound behind the furrow or with the assistance of dibbler or seed grower. On a substantial scale, seed grower can be utilized.
+
+By embracing the previously mentioned agronomical practices, it will be conceivable to acquire around 15-20 quintals of units for every hectare from bundle sort assortments and 20-30 quintals for every hectare from spreading assortments.
+
+Seed rate of 9-13 kilogram/hectare is used to acquire the population of crop. The seeds need to be sown approx 4 to 5 cm into the furrows.
+</section>
+</div>
+
+<div class="crop-info-left">
+<section>
+	<b style="color:white; font-size: 30px;"><u>Climate Requirement</u></b><br><br>
+Groundnut can be developed in both tropics and sub-tropics. Essentially it requires a long and warm developing season and very much disseminated precipitation amid its development period. For good yield, it needs enough daylight and warm climatic conditions. The best appropriate temperature for Peanut Farming is 22-30 °C. Bring down temperatures will diminish the product yield and nature of the nuts. Particularly, this product requires warm and dry atmosphere at the aging stage.
+<br><br>
+<b style="color:white; font-size: 30px;"><u>Major Groundnut Producing States in India</u></b><br>
+Gujarat, Andhra Pradesh, Tamil Nadu, Karnataka, Maharashtra, Rajasthan, Madhya Pradesh, Orissa, and Uttar Pradesh
+</section>
+</div>	
+<div class="crop-info">
+<section>
+<b style="color:white; font-size: 30px;"><u>Soil Required</u></b><br>
+Groundnut cultivates well in all around depleted sandy and sandy topsoil soils since light soil helps in simple entrance of roots and their improvement furthermore gathering. Maintain a strategic distance from clay or substantial soils as they are not appropriate for this product. In the event that you are anticipating extensive scale or business generation, it is encouraged to for soil testing and the appropriate soil pH for groundnut developing ought to be somewhere around 6.0 and 7.0.
+</section>
+</div>
+</div>		
+</body>
+</html>

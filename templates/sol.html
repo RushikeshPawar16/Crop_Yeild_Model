@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='dist.css') }}">
+</head>
+
+<body>
+	<h1><div class="header1">District wise Information (Solapur)</div></h1>
+	<div class="stats-left">
+	<p>Click on the following districts in the map of Maharashtra to obtain information</p>
+	<ul style="list-style-type:square;">
+		<li>Nashik</li>
+		<li>Kolhapur</li>
+		<li>Satara</li>
+		<li>Solapur</li>
+		<li>Sangli</li>
+	</ul>
+</div>
+<div class="stats-right">
+<table>
+  <tr>
+    <th colspan="2">Solapur District</th>
+  </tr>
+  <tr>
+    <td>Area</td>
+    <td>1484500 Hectares</td>
+  </tr>
+  <tr>
+    <td>Elevation</td>
+    <td>458m (1502 ft)</td>
+    
+  </tr>
+  <tr>
+    <td>Annual Temperature(Avg)</td>
+    <td>21.4°C</td>
+    
+  </tr>
+  <tr>
+    <td>Annual Rainfall(Avg)</td>
+    <td>550mm-700mm</td>
+    
+  </tr>
+  <tr>
+    <td>Rivers</td>
+    <td>Bhima, Nira, Man, Sina, Bhogavati, Bhend, Borinadi</td>
+  </tr>
+  <tr>
+    <td>Population</td>
+    <td>4,317,756(2011 census)</td>
+   
+</tr>
+<tr>
+    <td colspan="2">Solapur District is one of the leading and progressive districts in Maharashtra. Today’s Solapur District has been carved out of the territories of the neighbouring Ahmednagar, Pune and Satara districts of Maharashtra State. This place is famous as a Centre for Jains. The city is located on major road and rail routes between Mumbai and Hyderabad, with a branch line to Bijapur and Gadag. Solapur developed as a commercial centre for cotton and other agricultural produce. The shape of the district resembles a flying eagle. The proportion of the area of the Solapur district as compared to Maharashtra State is about 5% and in the Pune administrative division is 20%. Solapur is known for its historical, religious, industrial and commercial importance. Ground Fort, Siddheshwar Temple, Mallikarjuna Temple, Parasnath Temple, Adinath Temple, Masjids, Churches and Agyari are the attractions of this place. Akkalkot is considered to be an important center of Datta. The Vatavriksha Temple of Shri Swami Samartha and Akkalkot Swami math are important religious places, which are visited by many devotees.
+</td>
+</tr>
+</table>		
+</div>
+<div class="map1">
+<img src="/static/images/maha.jpg" usemap="#image-map">
+<map name="image-map">
+ <area target="" alt="nas"  href="{{url_for('nas')}}" coords="131,149,239,219" shape="rect">
+    <area target="" alt="kol"  href="{{url_for('kol')}}" coords="157,495,235,570" shape="rect">
+    <area target="" alt="sol"  href="{{url_for('sol')}}" coords="259,376,366,451" shape="rect">
+    <area target="" alt="sat"  href="{{url_for('sat')}}" coords="147,399,236,446" shape="rect">
+    <area target="" alt="sang" href="{{url_for('san')}}" coords="182,460,313,491" shape="rect">
+</map>
+</div>

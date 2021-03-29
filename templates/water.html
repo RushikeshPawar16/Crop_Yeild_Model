@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='crop.css')}}">
+</head>
+<body>
+	<script type="text/javascript">
+
+      // Menu-toggle button
+
+      $(document).ready(function() {
+            $(".menu-icon").on("click", function() {
+                  $("nav ul").toggleClass("showing");
+            });
+      });
+
+      // Scrolling Effect
+
+      $(window).on("scroll", function() {
+            if($(window).scrollTop()) {
+                  $('nav').addClass('black');
+            }
+
+            else {
+                  $('nav').removeClass('black');
+            }
+      })
+	</script>
+<div class="main">
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+    <img src="/static/images/stat1.png" style="width:100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="/static/images/stat2.png" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="/static/images/stat3.png" style="width:100%">
+</div>
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="/static/images/stat4.png" style="width:100%">
+  </div>
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="/static/images/stat5.png" style="width:100%">
+</div>
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+<!--
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+-->
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+</div>
+<ul>
+  <li><a href="{{url_for('water')}}">Crops Information</a></li>
+  <li><a href="{{url_for('cropdist')}}">More District Information</a></li>
+  <li><a href="https://drive.google.com/drive/folders/18BMOAt0Aqtb8Dx9jJJKnkM3u4ycnT9JU?usp=sharing">Datasets</a></li>
+  <li style="float:right"><a href="{{url_for('contact')}}">Contact us</a></li>
+</ul>
+<div class="crop-water">
+  <b style="color:white; font-size: 30px;"><u>Climate of Maharashtra</u></b><br><br>
+Maharashtra has typical monsoon climate, with hot, rainy and cold weather seasons. Tropical conditions prevail all over the state, and even the hill stations are not that cold. Dew, frost, hail can also be happened sometimes according to the seasonal weather.
+<br><br>
+Summer: March, April and May are the hottest months. During April and May thunderstorms are common all over the state. Temperature varies between 22°C-39°C during this season.
+<br><br>
+Rainy: Rainfall starts normally in the first week of June. July is the wettest month in Maharashtra, while August too gets substantial rain. Monsoon starts its retreat with the coming of September from the state.
+<br><br>
+Winter: Cool dry spell, with clear skies gentle breeze and pleasant weather prevails from November to February. But the eastern part of Maharashtra sometimes receives some rainfall. Temperature varies between 12°C-34°C during this season.
+<br><br>
+Rainfall: Rainfall in Maharashtra differs from region to region. Thane, Raigad, Ratnagiri and Sindhudurg districts, receive heavy rains of an average of 200 centimeters annually. But the districts of Nasik, Pune, Ahmednagar, Dhule, Jalgaon, Satara, Sangli, Solapur and parts of Kolhapur get rainfall less than 50 centimeters. Rainfall particularly concentrates to the Konkan and Sahyadrian Maharashtra. Central Maharashtra receives less rainfall. However, under the influence of the Bay of Bengal, eastern Vidarbha receives good rainfall in July, August and September.
+<br><br>
+</div>
+<div class="irg">
+<b style="color:white; font-size: 30px;"><u>Irrigation</u></b><br><br>
+<table border="1">
+  <tr>
+    <th style="color:white; font-size: 25px;">Wheat</th>
+    <th style="color:white; font-size: 25px;">Rice</th>
+  </tr>
+  <tr>
+    <td>At all the stage of growth, sufficient soil moisture is necessary for normal development of the wheat plant. The peak root beginning stage and heading stage are vital stages because at that point the plant suffers most due to moisture pressure.  In case of dwarf yielding variety, sowing irrigation should be given first and crop should be sown when the field becomes fit for the operation. <br>
+
+First Irrigation: After 20-25 days of sowing, i.e. at the crown root initiation stage, the first irrigation is given. It is desirable to apply first irrigation, in cooler regions and in late sown wheat, approximately 25-30 days after sowing. Delayed irrigation should be shunned because it falls out in upsetting the synchronous tillering, subnormal heads, poor root system and finally poor grain yield. It is most vital irrigational stage. <br>
+
+Second Irrigation: 40-45 days after sowing, at tillering stage, the second irrigation is advisable. <br>
+
+Third Irrigation: At late jointing stage, almost within 70-75 days after sowing. <br>
+
+Fourth Irrigation: At flowering stage, within 90-95 days after sowing. During this period the plant suffers most from soil moisture deficiency, hence irrigation at this stage is significant. Grain number and size reduce considerably at this point.
+<br>
+Fifth Irrigation: At dough stage, within 110-115 days after sowing. The number of irrigations required for the crop to grow varies depending on the soil type, rainfall and the amount of water functionalized per irrigation.</td>
+
+<td>The steps involved for the irrigation of rice crop is explained below.   
+<br>
+1: Establish the crop evapo-transpiration
+<br>
+2: Establish the factors of crop
+<br>
+3: Estimate the water needed
+<br>
+4: Establish the quantity of water required for field preparation Root zone is saturated with water a month prior sowing. The quantity of water required varies according the type of soil and root's depth. It is nonetheless reckon that the quantity of water required to saturate the root zone is 300 mm. Thus: S.A.T = 300 mm
+<br>
+5: Decide the amount of filtration and seeping losses.
+The filtration and seeping losses depend on soil type. They will be low in very heavy, well-puddled clay soils and high in the case of more sandy soils. They can best be determined locally. If no local data can be obtained, the following values may be used:
+<br>
+Sandy Soils   : 8 mm/day = 240 mm/month<br>
+Heavy Clay    : 2 mm/day = 60 mm/month<br>
+Average        : 5 mm/day = 150 mm/month<br>
+
+6: Decide the quantity of water required to initiate a layer of water.
+A water layer is established after transplanting. The required water for preserving the water layer is taken into consideration with the assurance of the filtrations and seeping losses. The depth of the water layer is cautiously being studied in accordance to various approaches.
+</td>
+  </tr>
+</table>
+<table border="1">
+  <tr>
+    <th style="color:white; font-size: 25px;">Sugarcane</th>
+    <th style="color:white; font-size: 25px;">Jowar</th>
+   <th style="color:white; font-size: 25px;">Groundnut</th>
+ </tr>
+ <tr>
+   <td style="width:50%;">
+     Irrigation is extremely critical in sugarcane development as this harvest requests plentiful water at different stages; growing, developmental stage, aging and start of growing. Amid water shortage periods, mulching and trickle water system, exchange wrinkle water system techniques ought to be taken after for better usage of water sources.<br>
+In case of tropical Irrigation should be given as follows:<br>
+
+1-35 days after planting: Once in 7 days during germination (sprouting).<br>
+
+36-100 days after planting: Once in 10 days during formative stage (tillering).<br>
+
+101-270 days after planting: Once in 7 days during growth period.<br>
+
+271 days after planting and up to harvest: Once in 15 days during maturity stage which is<br>
+
+In general sugarcane crops requires around 35 to 40 irrigations all through its yield development in tropical regions where as it requires 8 to 10 irrigations in sub-tropical territories.
+   </td>
+<td style="width: 20%">
+  Monsoon sown crop needs almost up to 3 irrigations based on rainfalls. Whereas November sown needs almost up to 7 irrigations because of the high temperature. Rabi Jowar needs almost 5 to 6 irrigations in the southern parts of India.
+</td>
+<td>
+Being a blustery season edit, groundnut does not require water system. Be that as it may, if drought happens, water system may get to be important. To start with water system ought to be given at case advancement arrange. The field ought to be all around depleted. In the southern part of the nation where groundnut is developed in Rabi season as well, three to four water systems are important. Give the primary water system toward the begin of blooming and the ensuing water systems at whatever point required amid the fruiting time frame to support peg entrance and unit improvement. The last water system before reaping will encourage the full recuperation of cases from the dirt.  
+</td>
+ </tr>
+</table>
+</div>
+  </div>
+</body>
+</html>

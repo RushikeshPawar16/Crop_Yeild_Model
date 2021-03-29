@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Yield Estimator</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+	<div class="header">
+                <div class="home">
+                    <button class="btn-2"><a href="{{url_for('h1')}}">HOME</a></button>
+                </div>
+                <div class="contact_us">
+                    <button class="btn-2" ><a href="{{url_for('district')}}">DISTRICTS Information</a></button>
+                </div>
+            </div>
+<h1><div class="header1">Regression Based Crop Yield Estimation Model (Jowar)</div></h1>
+<div class="container">
+	
+	<form id="contact" method="POST" action="/predictjowar">
+		<fieldset>
+		<select name="District" style="width:100%;height:50px;">
+            <option disabled selected value>-- select a district --</option>
+            <option  value="Nashik">Nashik</option>
+            <option  value="kolhapur">kolhapur</option>
+            <option  value="Sangli">Sangli</option>
+            <option  value="Satara">Satara</option>
+            <option  value="Solapur">Solapur</option>
+			</select><br>
+        <small id="MYhelp" class="form-text text-muted">Select district</small><br>
+		</fieldset>
+		<fieldset>
+		<input type="number" name="Year" placeholder="Year" tabindex="2" min="1996" max="2016">
+		<small id="MYhelp" class="form-text text-muted">Enter the value for Year</small><br>
+		</fieldset>
+		<fieldset>
+		<input type="number" name="Area" placeholder="Area" tabindex="2" min="10" required >
+		<small id="MYhelp" class="form-text text-muted">Enter the value for Area</small><br>
+		</fieldset>
+		<fieldset>
+		<input type="number" name="Production" placeholder="Production" tabindex="2" required >
+		<small id="MYhelp" class="form-text text-muted">Enter the value for Production</small><br>
+		</fieldset>
+		<fieldset>
+		<input type="number" name="Annual_rainfall" placeholder="Annual_rainfall" tabindex="2" step="0.01" min="1200" max="2900" required >
+		<small id="MYhelp" class="form-text text-muted">Enter the value for Annual_rainfall</small><br>
+		</fieldset>
+		<fieldset>
+		<input type="number" name="Temperature" placeholder="Temperature" tabindex="2" step="0.1" min="21.0" max="40.0" required >
+		<small id="MYhelp" class="form-text text-muted">Enter the value for Temperature</small><br>
+		</fieldset>
+		<fieldset>
+		<button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+		</fieldset>
+		
+</form>
+</div>	
+</div>
+<div class="crop-info">
+<img src="/static/images/jowar.jpg">
+<section>
+	<b style="color:white; font-size: 30px;"><u>Sowing, Harvesting and Yield</u></b><br><br>
+Jowar can be grown in approximately all seasons. It is grown as a Kharif crop in the northern parts of India and as a Rabi crop in the southern. As a kharif crop, Jowar is sown almost in June’s last week, i.e. right after the first shower of monsoon. End of June to starting of July is considered the best time to sow Jowar seeds depending on the beginning of monsoon. While mid October to mid November is considered best to sow the Rabi Jowar. Minimum spacing of 41 to 46 cm among the rows and 14 to 20 cm among the plants is fairly acceptable.
+
+Seed rate of 9-13 kilogram/hectare is used to acquire the population of crop. The seeds need to be sown approx 4 to 5 cm into the furrows.
+</section>
+</div>
+
+<div class="crop-info-left">
+<section>
+	<b style="color:white; font-size: 30px;"><u>Climate Requirement</u></b><br><br>
+Being a tropical crop, Jowar blossoms healthily from 25 degree Celsius to 32 degree Celsius. Temperature below 16 degree Celsius is considered dreadful for the crop yield. Jowar requires rainfall of approx 40 cm yearly. Jowar can tolerate extreme drought and can be easily grown in dry regions. Extreme moisture and dry conditions are not appropriate for Jowar to grow.
+<br><br>
+<b style="color:white; font-size: 30px;"><u>Soil Required</u></b><br>
+Jowar can adapt to a wide variety of soils, however it can also be grown in sandy & loamy soils with good drainage. Soil with pH from 6-7.5 is considered ideal for cultivation and superior yield. Jowar field must be ploughed & leveled to prevent weeds from growing.
+</section>
+</div>	
+<div class="crop-info">
+<section>
+<b style="color:white; font-size: 30px;"><u>Major Jowar Producing States in India</u></b><br>
+Jowar grows best in Indian zones with 100cm or less rainfall and temperature varying from 26 degree - 33 degree Celsius. Jowar is the most cultivable crop, after wheat, on the land of India. Regur soil with alluvium and clayey properties is considered best for Jowar cultivation in India. While growing, it needs rainfall and whereas maturity of plants is perceived mostly throughout winds from north east.
+Jowar is cultivated of about 8% of the total land whereas it covers the capacity of 10% amid Millets.
+Peninsular India owns majority of Jowar cultivating fields with Karnataka, Madhya Pradesh and Andhra Pradesh contributing to the 78% of the land & 82% of the Jowar crop produce. Rajasthan, Uttar Pradesh and Haryana contribute to Jowar cultivation from North West of India.
+</section>
+</div>		
+</body>
+</html>
