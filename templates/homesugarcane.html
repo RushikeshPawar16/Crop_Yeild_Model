@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Yield Estimator</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+	<div class="header">
+                <div class="home">
+                    <button class="btn-2"><a href="{{url_for('h1')}}">HOME</a></button>
+                </div>
+                <div class="contact_us">
+                    <button class="btn-2" ><a href="{{url_for('district')}}">DISTRICTS Information</a></button>
+                </div>
+            </div>
+<h1><div class="header1">Regression Based Crop Yield Estimation Model (Sugarcane)</div></h1>
+<div class="container">
+	
+	<form id="contact" method="POST" action="/predictsugarcane">
+		<fieldset>
+		<select name="District" style="width:100%;height:50px;">
+            <option disabled selected value>-- select a district --</option>
+            <option  value="Nashik">Nashik</option>
+            <option  value="kolhapur">kolhapur</option>
+            <option  value="Sangli">Sangli</option>
+            <option  value="Satara">Satara</option>
+            <option  value="Solapur">Solapur</option>
+			</select><br>
+        <small id="MYhelp" class="form-text text-muted">Select district</small><br>
+		</fieldset>
+		<fieldset>
+		<input type="number" name="Year" placeholder="Year" tabindex="2" min="1996" max="2016">
+		<small id="MYhelp" class="form-text text-muted">Enter the value for Year</small><br>
+		</fieldset>
+		<fieldset>
+		<input type="number" name="Area" placeholder="Area" tabindex="2" min="10" required >
+		<small id="MYhelp" class="form-text text-muted">Enter the value for Area</small><br>
+		</fieldset>
+		<fieldset>
+		<input type="number" name="Production" placeholder="Production" tabindex="2" required >
+		<small id="MYhelp" class="form-text text-muted">Enter the value for Production</small><br>
+		</fieldset>
+		<fieldset>
+		<input type="number" name="Annual_rainfall" placeholder="Annual_rainfall" tabindex="2" step="0.01" min="800" max="2900" required >
+		<small id="MYhelp" class="form-text text-muted">Enter the value for Annual_rainfall</small><br>
+		</fieldset>
+		<fieldset>
+		<input type="number" name="Temperature" placeholder="Temperature" tabindex="2" step="0.1" min="21.0" max="40.0" required >
+		<small id="MYhelp" class="form-text text-muted">Enter the value for Temperature</small><br>
+		</fieldset>
+		<fieldset>
+		<button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+		</fieldset>
+		
+</form>
+</div>	
+</div>
+<div class="crop-info">
+<img src="/static/images/sugarcane.jpg">
+<section>
+	<b style="color:white; font-size: 30px;"><u>Sowing, Harvesting and Yield</u></b><br><br>
+Soil preparation is another critical undertaking in sugarcane development as this product remains in the field for over one year. With the assistance of tractor, land ought to be given 2-3 profound ploughings. To begin with furrowing ought to be completed instantly once the past product is reaped. Make a point to leave the land subsequent to furrowing for 2-3 months for sun exposure. Any blocks ought to be squashed and leveled. Second transversely furrowing ought to be conveyed by another furrow and 3-4 nerve racking ought to be given to convey the dirt to fine tilth organize. Soil ought to be leveled with the assistance of planker for seed bed arrangement. Supplement the dirt with all around decayed yard compost (FMY) of 30 tons per hectare.
+</section>
+</div>
+
+<div class="crop-info-left">
+<section>
+	<b style="color:white; font-size: 30px;"><u>Climate Requirement</u></b><br><br>
+The diverse basic stages are germination, tillering, early development, dynamic development and extension. Ideal temperature for growing (germination) of stem cuttings is 32° to 38°c. It backs off beneath 25°, achieves level between 30°-34°. Temperatures over 38° diminish the rate of photosynthesis and increment breath. For maturing, in any case, generally low temperatures in the scope of 12° to 14° are attractive.
+<br><br>
+<b style="color:white; font-size: 30px;"><u>Soil Required</u></b><br>
+Sugarcane can be developed on insightful scope of soils. In any case, it develops best on very much depleted, ripe medium to substantial soils. Soils rich in natural matter and leveled are generally reasonable. It is overwhelming feeder edit in this way, ought not be developed on light soils.
+</section>
+</div>
+<div class="crop-info">
+<section>
+<b style="color:white; font-size: 30px;"><u>Major Sugarcane Producing States in India</u></b><br>
+In Tropical zone, Maharashtra is the significant sugarcane developing state covering around 9.4 lakh ha region with generation of 61.32 Million ton, though the efficiency of Tamil Nadu is most noteworthy in tropical zones. Uttar Pradesh is the most elevated sugarcane delivering State in sub tropical zone having territory around 22.77 Lakh ha with the creation of 135.64 Million Ton stick though Haryana has most astounding efficiency of sugarcane in Sub tropical zone. 
+</section>
+</div>		
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        {% block head %}
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style1.css') }}">
+        {% endblock %}
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">HOME</a></li>
+                <li><a href="{{ url_for('calc') }}"> CALCULATOR</a></li>
+                <li><a href="{{ url_for('stat') }}">CROP STATS</a></li>
+            </ul>
+        </nav>
+
+                <div class="container">
+                   {% block content %}
+
+                    {% endblock %}
+                </div>
+        <div class="ham">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+<script>
+    $(".ham").click(function(){
+        $("nav").toggleClass("active");
+    })
+</script>
+    </body>
+</html>
+
+
+

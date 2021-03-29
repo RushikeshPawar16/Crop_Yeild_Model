@@ -1,0 +1,50 @@
+{%extends "home1.html" % }
+
+        {% block head %}
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style1.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style3.css') }}">
+        {% endblock %}
+
+        {% block content %}
+
+<div class="container">
+            <h1>YIELD CALCULATOR</h1><br>
+             <div>
+                <select>
+                    <option disabled selected value>-- select a district --</option>
+                    <option value="nashik">NASHIK</option>
+                    <option value="KOLHAPUR">KOLHAPUR</option>
+                    <option value="SANGLI">SANGLI</option>
+                    <option value="SANGLI">SATARA</option>
+                    <option value="SANGLI">SOLAPUR</option>
+                    <option value="volvo" disabled>NANDUBAR</option>
+                    <option value="volvo" disabled>DHULE</option>
+                    <option value="volvo" disabled>JALGAON</option>
+                    <option value="volvo" disabled>BULDHANA</option>
+                    <option value="volvo" disabled>AKOLA</option>
+                    <option value="volvo" disabled>AMRAVATI</option>
+                    <option value="volvo" disabled>WARDHA</option>
+                    <option value="volvo" disabled>NAGPUR</option>
+                    <option value="volvo" disabled>AURANGABAD</option>
+                    <option value="volvo" disabled>BHANDARA</option>
+                     <option value="volvo" disabled>BEED</option>
+                    <option value="volvo" disabled>CHANDRAPUR</option>
+                    <option value="volvo" disabled>OSMANABAD</option>
+                    <option value="volvo" disabled>GADCHIROLI</option>
+                    <option value="volvo" disabled>GONDIA</option>
+                    <option value="volvo" disabled>AHMEDNAGAR</option>
+
+</select>
+             </div>
+
+        <nav>
+            <ul>
+                <li>NASHIK</li>
+                <li> KOLHAPUR</li>
+                <li>SANGLI </li>
+                <li> SATARA</li>
+                <li>SOLAPUR </li>
+            </ul>
+        </nav>
+                </div>
+{%endblock%}

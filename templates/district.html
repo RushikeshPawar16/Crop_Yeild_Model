@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='dist.css') }}">
+</head>
+
+<body>
+	<h1><div class="header1">District wise Information (MAHARASHTRA)</div></h1>
+	<div class="stats-left">
+	<p>Click on the following districts in the map of Maharashtra to obtain information</p>
+	<ul style="list-style-type:square;">
+		<li>Nashik</li>
+		<li>Kolhapur</li>
+		<li>Satara</li>
+		<li>Solapur</li>
+		<li>Sangli</li>
+	</ul>
+</div>
+	<div class="stats-right">
+		<img src="/static/images/m1.png">
+		<p>Location of Maharashtra in India</p>
+	</div>
+<div class="map1">
+<img src="/static/images/maha.jpg" usemap="#image-map">
+<map name="image-map">
+    <area target="" alt="nas"  href="{{url_for('nas')}}" coords="131,149,239,219" shape="rect">
+    <area target="" alt="kol"  href="{{url_for('kol')}}" coords="157,495,235,570" shape="rect">
+    <area target="" alt="sol"  href="{{url_for('sol')}}" coords="259,376,366,451" shape="rect">
+    <area target="" alt="sat"  href="{{url_for('sat')}}" coords="147,399,236,446" shape="rect">
+    <area target="" alt="sang" href="{{url_for('san')}}" coords="182,460,313,491" shape="rect">
+</map>
+</div>
+<div class="stats-right">
+	<table>
+  <tr>
+    <th colspan="2">Coordinates (Mumbai): 18.97°N 72.820°E</th>
+  </tr>
+  <tr>
+    <td>Formation</td>
+    <td>1 May, 1960</td>
+  </tr>
+  <tr>
+    <td>Capital</td>
+    <td>Mumbai</td>
+    
+  </tr>
+  <tr>
+    <td>Area</td>
+    <td>307,713 km2(118,809 sq mi)</td>
+    
+  </tr>
+  <tr>
+    <td>GDP(2018-2019)</td>
+    <td>₹27.96 lakh crore (US$390 billion)</td>
+   
+</tr>
+</table>
+
+	</div>
+</body>
+</html>
+</body>
+</html>

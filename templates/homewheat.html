@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Yield Estimator</title>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+	<div class="header">
+                <div class="home">
+                    <button class="btn-2"><a href="{{url_for('h1')}}">HOME</a></button>
+                </div>
+                <div class="contact_us">
+                    <button class="btn-2" ><a href="{{url_for('district')}}">DISTRICTS Information</a></button>
+                </div>
+            </div>
+<h1><div class="header1">Regression Based Crop Yield Estimation Model (Wheat)</div></h1>
+<div class="container">
+	
+	<form id="contact" method="POST" action="/predictwheat">
+		<fieldset>
+		<select name="District" style="width:100%;height:50px;">
+            <option disabled selected value>-- select a district --</option>
+            <option  value="Nashik">Nashik</option>
+            <option  value="kolhapur">kolhapur</option>
+            <option  value="Sangli">Sangli</option>
+            <option  value="Satara">Satara</option>
+            <option  value="Solapur">Solapur</option>
+			</select><br>
+        <small id="MYhelp" class="form-text text-muted">Select district</small><br>
+		<fieldset>
+		<input type="number" name="Year" placeholder="Year" tabindex="2" min="1996" max="2016">
+		<small id="MYhelp" class="form-text text-muted">Enter the value for Year</small><br>
+		</fieldset>
+		<fieldset>
+		<input type="number" name="Area" placeholder="Area" tabindex="2" step="0.01" min="0.0" required >
+		<small id="MYhelp" class="form-text text-muted">Enter the value for Area</small><br>
+		</fieldset>
+		<fieldset>
+		<input type="number" name="Production" placeholder="Production" step="0.01" min="0.01" tabindex="2" required >
+		<small id="MYhelp" class="form-text text-muted">Enter the value for Production</small><br>
+		</fieldset>
+		<fieldset>
+		<input type="number" name="Annual_rainfall" placeholder="Annual_rainfall" tabindex="2" step="0.01" min="800" max="2900" required >
+		<small id="MYhelp" class="form-text text-muted">Enter the value for Annual_rainfall</small><br>
+		</fieldset>
+		<fieldset>
+		<input type="number" name="Temperature" placeholder="Temperature" tabindex="2" step="0.1" min="21.0" max="40.0" required >
+		<small id="MYhelp" class="form-text text-muted">Enter the value for Temperature</small><br>
+		</fieldset>
+		<fieldset>
+		<button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+		</fieldset>
+		
+</form>
+</div>	
+</div>
+<div class="crop-info">
+<img src="/static/images/wheat.jpg">
+<section>
+	<b style="color:white; font-size: 30px;"><u>Sowing, Harvesting and Yield</u></b><br><br>
+The type of farming, either dry or irrigated, temperature and the varieties decide the sowing time of wheat crop. Late October to early November is the most favorable sowing time. Rain fed crops is usually sown from 15th to 30th October and irrigated crop from 1st to 15th November. Sowing seedlings during early October results in mortality of seedling due to foot rot or root rot disease because of high temperature. While late sowing in last week of November or December gives low yield. However, wheat should be sown when coconut oil starts freezing i.e. early winters.
+Despite being a long day crop, wheat still is grown in winters where day period is short. To overcome this, wheat crop should be sown in the direction that allows maximum interception of sunlight. Sowing is done north-north-east or north-south direction to get higher yield because direction of sun over India, during winters is south-south-east to west-north-west.
+For better germination and establishment of seedling, wheat seed should be placed in a moist zone. Under rain fed condition when crop taken on residual moisture sowing is done at 8 to 10 cm depth. Sowing is done at 3 to 5 cm depth, under irrigation condition, after pre-sowing irrigation.
+</section>
+</div>
+
+<div class="crop-info-left">
+<section>
+	<b style="color:white; font-size: 30px;"><u>Climate Requirement</u></b><br><br>
+Wheat crop is extensively flexible. It can be grown in the sub- tropical and tropical zones, and even has adapting characteristics towards the cold of the far north. Wheat can bear extreme cold and snow and recommence growth with the setting in of warm weather. It can be grown from 3300 meters to as low as sea level.
+The finest wheat are cultivated in areas privileged with cool, moist weather at key stage of the growing period in accordance to dry, warm weather to facilitate the crop to ripen appropriately. 20 degree Celsius - 25 degree Celsius is the most favorable temperature in which seeds can germinate the best, but the wheat is quite a versatile crop and can germinate in the temperature from 3.5 degree Celsius to 35 degree Celsius. Rainfalls just after sowing hinder germination and persuade seedling blight. Areas with a warm and damp climate are not suited for wheat growing.
+Extreme change in temperature and drought, at the flowering and heading stage, can harm the wheat cultivation. Rusting is one more threat to the wheat crop in cloudy weather, special with constant change between low temperatures and high humidity. The best temperature required by wheat plant to ripen is 14 degree Celsius – 15 degree Celsius. During high temperatures, excessive energy is lost during the course of transpiration. This reduced left over energy results in deprived grain formation and poorer yields.
+<br>
+</section>
+</div>
+<div class="crop-info">
+<section>
+<b style="color:white; font-size: 30px;"><u>Major Wheat Producing States in India</u></b><br>
+India occupies the second position in admiration of area and production of wheat crop. Uttar Pradesh, Madhya Pradesh, Punjab Rajasthan, Bihar, Haryana, Maharashtra and Gujarat are major wheat growing state in the country. 4332 Kg/ha is the highest average yield per hectare by Punjab followed by Haryana with 3916 kg/ha whereas Uttar Pradesh gives the maximum acreage and production of wheat. India financially records about 12 per cent of the total wheat production of the world.
+</section>
+</div>
+<div class="crop-info">
+	<section>
+<b style="color:white; font-size: 30px;"><u>Soil Required</u></b><br>
+Wheat, being a versatile crop can grow in a variety of soils. Ideal soils for wheat cultivation are soils with loamy feel or clay loam, high-quality arrangement and temperate water retaining capacity. Avoiding permeable and extremely drained oils is a must.
+</section>
+</div>	
+</body>
+</html>
